@@ -176,8 +176,20 @@ The Memory Vault acts as a persistent store of learnings, allowing the system to
 
 ---
 
+## Visual Diagrams
+
+See [DIAGRAMS.md](DIAGRAMS.md) for comprehensive Mermaid diagrams showing:
+- Overall system architecture
+- Agent tier execution flow
+- Memory vault lifecycle
+- AI Board Meeting flow
+- Complete trading decision flow
+- Memory application engine
+- Security & governance flow
+
 ## Further Reading
 
+- [DIAGRAMS.md](DIAGRAMS.md) - Visual system flow diagrams
 - [AI Board Meetings](AI_BOARD_MEETINGS.md) - How agents collaborate
 - [CIO Memory Vault](CIO_MEMORY_VAULT.md) - Persistent learning system
 - [Autonomous Agents](AUTONOMOUS_AGENTS.md) - Agent orchestration details
