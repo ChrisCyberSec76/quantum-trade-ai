@@ -1,0 +1,78 @@
+{
+  "example_name": "CIO Memory Record Example",
+  "description": "Example structure of a memory stored in the CIO Memory Vault",
+  "memory_records": [
+    {
+      "memory_type": "PATTERN_INSIGHT",
+      "title": "NVDA gap-up pattern success",
+      "content": "NVDA gap-ups >2% with volume >2x average have 80% win rate when entered before 10 AM ET. Pattern has been successful in 12 of 15 occurrences.",
+      "related_symbols": ["NVDA"],
+      "priority": "HIGH",
+      "auto_apply": true,
+      "effectiveness_score": 85,
+      "created_date": "2026-02-05T16:30:00Z",
+      "valid_until": "2026-02-07T09:30:00Z",
+      "metrics": {
+        "win_rate": 80,
+        "sample_size": 15,
+        "successful_applications": 12
+      },
+      "application_rules": {
+        "confidence_boost": 10,
+        "applies_to": ["NVDA"],
+        "conditions": {
+          "gap_percent_min": 2.0,
+          "volume_ratio_min": 2.0,
+          "time_window": "before 10:00 AM ET"
+        }
+      }
+    },
+    {
+      "memory_type": "ERROR_FIX",
+      "title": "Avoid low-volume breakouts",
+      "content": "3 consecutive losses from low-volume breakouts. Add volume filter: minimum 1.5x average volume required for entry.",
+      "priority": "HIGH",
+      "auto_apply": true,
+      "created_date": "2026-02-04T15:45:00Z",
+      "valid_until": "2026-02-11T09:30:00Z",
+      "related_symbols": [],
+      "prevention_rules": {
+        "filter_type": "volume",
+        "minimum_volume_ratio": 1.5,
+        "applies_to_all": true
+      }
+    },
+    {
+      "memory_type": "BATTLE_PLAN",
+      "title": "Market Open Battle Plan - 2026-02-06",
+      "content": "Focus on gap-up momentum plays. Watch for NVDA, AMD breakouts. Market regime: RISK_ON. VIX at 16.5 indicates favorable conditions.",
+      "priority": "HIGH",
+      "auto_apply": true,
+      "created_date": "2026-02-06T04:00:00Z",
+      "valid_until": "2026-02-06T16:00:00Z",
+      "daily_priorities": [
+        "Gap-up momentum plays",
+        "NVDA and AMD monitoring",
+        "Risk management: max 80% allocation"
+      ],
+      "focus_symbols": ["NVDA", "AMD"]
+    },
+    {
+      "memory_type": "TRADE_OUTCOME",
+      "title": "WIN: AAPL +$250",
+      "content": "Profitable trade on AAPL. Strategy: MOMENTUM. Entry: $150.00, Exit: $152.50. Hold duration: 45 minutes. Profit: $250 (1.67%).",
+      "related_symbols": ["AAPL"],
+      "priority": "MEDIUM",
+      "created_date": "2026-02-05T14:30:00Z",
+      "metrics": {
+        "profit_loss": 250,
+        "profit_percent": 1.67,
+        "strategy": "MOMENTUM",
+        "entry_price": 150.00,
+        "exit_price": 152.50,
+        "hold_duration_minutes": 45
+      }
+    }
+  ],
+  "note": "These examples show different memory types stored in the CIO Memory Vault. Memories influence future trading decisions and system behavior."
+}

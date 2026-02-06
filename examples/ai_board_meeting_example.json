@@ -1,0 +1,120 @@
+{
+  "example_name": "AI Board Meeting Transcript Example",
+  "description": "Example of an AI Board Meeting where agents collaborate to make trading decisions",
+  "meeting": {
+    "meeting_type": "PRE_MARKET_PLANNING",
+    "timestamp": "2026-02-06T09:25:00Z",
+    "market_time": "Pre-Market (5 minutes before open)",
+    "participants": ["CIO", "SCOUT", "NEWS", "CATALYST", "RISK", "PATTERN", "HARVEY"],
+    "transcript": [
+      {
+        "speaker": "CIO",
+        "timestamp": "09:25:00",
+        "message": "Good morning team. Markets open in 5 minutes. Let's review the plan.",
+        "phase": "opening"
+      },
+      {
+        "speaker": "SCOUT",
+        "timestamp": "09:25:15",
+        "message": "Pre-market scan complete. Top movers: NVDA +2.5%, AMD +1.8%, META +1.2%. All have volume >2x average. NVDA looks strongest.",
+        "phase": "reports",
+        "data": {
+          "candidates": ["NVDA", "AMD", "META"],
+          "scores": {"NVDA": 85, "AMD": 72, "META": 68}
+        }
+      },
+      {
+        "speaker": "NEWS",
+        "timestamp": "09:25:30",
+        "message": "Overnight developments: Fed minutes released, dovish tone. 2 biotech FDA approvals. Market sentiment shifted bullish overnight.",
+        "phase": "reports",
+        "data": {
+          "news_score": 75,
+          "sentiment": "BULLISH"
+        }
+      },
+      {
+        "speaker": "CATALYST",
+        "timestamp": "09:25:45",
+        "message": "Today's events: NVDA earnings after close. AMD product launch at 11 AM. META has no major catalysts today.",
+        "phase": "reports",
+        "data": {
+          "catalysts": [
+            {"symbol": "NVDA", "event": "Earnings", "time": "After close", "impact": "HIGH"},
+            {"symbol": "AMD", "event": "Product launch", "time": "11:00 AM ET", "impact": "MEDIUM"}
+          ]
+        }
+      },
+      {
+        "speaker": "RISK",
+        "timestamp": "09:26:00",
+        "message": "Portfolio status: 2 open positions, 60% allocation. Max drawdown -1.2%. We have room for 1-2 more positions.",
+        "phase": "reports",
+        "data": {
+          "allocation_percent": 60,
+          "max_allocation": 100,
+          "open_positions": 2,
+          "max_drawdown": -1.2
+        }
+      },
+      {
+        "speaker": "PATTERN",
+        "timestamp": "09:26:15",
+        "message": "Technical analysis: NVDA breaking above resistance. AMD in ascending triangle. META consolidating.",
+        "phase": "reports",
+        "data": {
+          "patterns": {
+            "NVDA": {"type": "BREAKOUT", "strength": 88},
+            "AMD": {"type": "ASCENDING_TRIANGLE", "strength": 75},
+            "META": {"type": "CONSOLIDATION", "strength": 60}
+          }
+        }
+      },
+      {
+        "speaker": "HARVEY",
+        "timestamp": "09:26:30",
+        "message": "Synthesis: Strong pre-market setup. NVDA is the clear leader with earnings catalyst. AMD secondary play. META less compelling.",
+        "phase": "synthesis",
+        "data": {
+          "conviction": "HIGH",
+          "recommendation": "Focus on NVDA, monitor AMD"
+        }
+      },
+      {
+        "speaker": "CIO",
+        "timestamp": "09:26:45",
+        "message": "Excellent analysis team. Decision: Focus on NVDA as primary opportunity. Monitor AMD for confirmation. Skip META for now. SCOUT, continue scanning. RISK, watch allocation. Let's have a great day.",
+        "phase": "decisions",
+        "decisions": [
+          {
+            "action": "BUY",
+            "symbol": "NVDA",
+            "priority": "HIGH",
+            "rationale": "Strong gap-up, volume surge, earnings catalyst, breakout pattern"
+          },
+          {
+            "action": "MONITOR",
+            "symbol": "AMD",
+            "priority": "MEDIUM",
+            "rationale": "Good setup but secondary to NVDA. Watch for confirmation."
+          },
+          {
+            "action": "SKIP",
+            "symbol": "META",
+            "priority": "LOW",
+            "rationale": "Less compelling setup compared to NVDA and AMD"
+          }
+        ],
+        "directives": [
+          {"agent": "SCOUT", "action": "Continue scanning for momentum plays"},
+          {"agent": "RISK", "action": "Monitor allocation closely"},
+          {"agent": "PATTERN", "action": "Watch for breakout confirmations"}
+        ]
+      }
+    ],
+    "decisions_made": 3,
+    "meeting_duration_seconds": 105,
+    "outcome": "High-conviction focus on NVDA. System ready for market open."
+  },
+  "note": "This demonstrates how AI agents collaborate in Board Meetings. Production meetings include real-time agent interactions and decision-making."
+}

@@ -1,0 +1,103 @@
+{
+  "example_name": "System State Example",
+  "description": "Example structure of system state showing agent status and system health",
+  "system_state": {
+    "timestamp": "2026-02-06T10:15:00Z",
+    "market_status": "OPEN",
+    "system_health": "HEALTHY",
+    "active_agents": {
+      "total": 14,
+      "active": 12,
+      "idle": 2,
+      "error": 0
+    },
+    "agent_status": [
+      {
+        "agent_id": "SCOUT",
+        "status": "active",
+        "progress": 100,
+        "last_execution": "2026-02-06T10:10:00Z",
+        "next_execution": "2026-02-06T10:15:00Z",
+        "execution_count_today": 45
+      },
+      {
+        "agent_id": "NEWS",
+        "status": "active",
+        "progress": 100,
+        "last_execution": "2026-02-06T10:10:00Z",
+        "next_execution": "2026-02-06T10:15:00Z",
+        "execution_count_today": 45
+      },
+      {
+        "agent_id": "CIO",
+        "status": "active",
+        "progress": 100,
+        "last_execution": "2026-02-06T10:14:00Z",
+        "next_execution": "2026-02-06T10:29:00Z",
+        "execution_count_today": 8
+      },
+      {
+        "agent_id": "RISK",
+        "status": "active",
+        "progress": 100,
+        "last_execution": "2026-02-06T10:00:00Z",
+        "next_execution": "2026-02-06T10:30:00Z",
+        "execution_count_today": 3
+      }
+    ],
+    "trading_status": {
+      "auto_trading_enabled": true,
+      "open_positions": 3,
+      "portfolio_allocation_percent": 65,
+      "max_allocation_percent": 100,
+      "today_pnl": 425.50,
+      "today_trades": 5,
+      "win_rate_percent": 60.0
+    },
+    "memory_vault": {
+      "total_memories": 247,
+      "active_memories": 189,
+      "intelligence_score": 72,
+      "last_consolidation": "2026-02-06T04:00:00Z"
+    },
+    "recent_activity": [
+      {
+        "timestamp": "2026-02-06T10:14:00Z",
+        "type": "DECISION",
+        "agent": "CIO",
+        "action": "BUY",
+        "symbol": "NVDA",
+        "confidence": 88
+      },
+      {
+        "timestamp": "2026-02-06T10:10:00Z",
+        "type": "SCAN",
+        "agent": "SCOUT",
+        "candidates_found": 3,
+        "duration_ms": 1250
+      },
+      {
+        "timestamp": "2026-02-06T10:05:00Z",
+        "type": "TRADE_EXECUTED",
+        "symbol": "AMD",
+        "side": "BUY",
+        "shares": 100,
+        "price": 145.20
+      }
+    ],
+    "performance_metrics": {
+      "today": {
+        "pnl": 425.50,
+        "trades": 5,
+        "win_rate": 60.0,
+        "avg_hold_time_minutes": 38
+      },
+      "this_week": {
+        "pnl": 1250.75,
+        "trades": 18,
+        "win_rate": 61.1
+      }
+    }
+  },
+  "note": "This demonstrates the system state structure. Production system provides real-time status of all agents and trading activity."
+}

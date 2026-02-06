@@ -46,7 +46,12 @@ quantum-trade-ai/
 │   ├── AUTONOMOUS_AGENTS.md      # 14-agent orchestration
 │   └── ROADMAP.md                # Future development plans
 ├── examples/            # Mock data examples
-│   └── decision_flow_example.json  # Example decision flow
+│   ├── decision_flow_example.json      # Complete decision flow
+│   ├── agent_report_example.json        # Agent report structure
+│   ├── memory_record_example.json      # Memory vault records
+│   ├── ai_board_meeting_example.json   # Board meeting transcript
+│   ├── system_state_example.json       # System state structure
+│   └── api_response_example.json        # API response examples
 ├── .github/
 │   └── workflows/
 │       └── ci.yml       # CI workflow
@@ -152,7 +157,13 @@ This showcase repository is provided for demonstration purposes. The production 
 - **Production system**: Private repository (not public)
 - **Architecture diagrams**: See [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md)
 - **API contracts**: See [`backend/api/`](backend/api/) and [`backend/models/`](backend/models/)
-- **Example data**: See [`examples/decision_flow_example.json`](examples/decision_flow_example.json)
+- **Example data**: See [`examples/`](examples/) directory for:
+  - Decision flow examples
+  - Agent report structures
+  - Memory vault records
+  - AI Board Meeting transcripts
+  - System state examples
+  - API response formats
 
 ---
 

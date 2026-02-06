@@ -1,0 +1,89 @@
+{
+  "example_name": "API Response Examples",
+  "description": "Example API responses from the showcase backend endpoints",
+  "api_examples": {
+    "health_check": {
+      "endpoint": "GET /api/health",
+      "response": {
+        "status": "healthy",
+        "timestamp": "2026-02-06T10:15:00Z",
+        "version": "1.0.0",
+        "uptime_seconds": 86400
+      }
+    },
+    "system_state": {
+      "endpoint": "GET /api/system/state",
+      "response": {
+        "success": true,
+        "timestamp": "2026-02-06T10:15:00Z",
+        "system": {
+          "status": "operational",
+          "active_agents": 12,
+          "market_status": "OPEN",
+          "auto_trading_enabled": true
+        },
+        "trading": {
+          "open_positions": 3,
+          "portfolio_allocation_percent": 65,
+          "today_pnl": 425.50,
+          "today_trades": 5
+        },
+        "agents": [
+          {
+            "agent_id": "SCOUT",
+            "status": "active",
+            "last_execution": "2026-02-06T10:10:00Z"
+          },
+          {
+            "agent_id": "CIO",
+            "status": "active",
+            "last_execution": "2026-02-06T10:14:00Z"
+          }
+        ]
+      }
+    },
+    "decisions": {
+      "endpoint": "GET /api/decisions",
+      "response": {
+        "success": true,
+        "timestamp": "2026-02-06T10:15:00Z",
+        "decisions": [
+          {
+            "id": "dec_001",
+            "timestamp": "2026-02-06T10:14:00Z",
+            "agent": "CIO",
+            "action": "BUY",
+            "symbol": "NVDA",
+            "confidence": 88,
+            "rationale": "Strong gap-up momentum with multiple confirmations",
+            "status": "PENDING"
+          },
+          {
+            "id": "dec_002",
+            "timestamp": "2026-02-06T10:05:00Z",
+            "agent": "CIO",
+            "action": "BUY",
+            "symbol": "AMD",
+            "confidence": 72,
+            "rationale": "Ascending triangle pattern with product launch catalyst",
+            "status": "EXECUTED"
+          },
+          {
+            "id": "dec_003",
+            "timestamp": "2026-02-06T09:45:00Z",
+            "agent": "CIO",
+            "action": "SELL",
+            "symbol": "TSLA",
+            "confidence": 85,
+            "rationale": "Profit target reached. Exit signal triggered.",
+            "status": "EXECUTED"
+          }
+        ],
+        "total": 3,
+        "pending": 1,
+        "executed": 2
+      }
+    }
+  },
+  "note": "These are example API responses from the showcase backend. Production endpoints return real-time data from the trading system."
+}

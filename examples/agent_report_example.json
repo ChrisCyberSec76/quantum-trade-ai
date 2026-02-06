@@ -1,0 +1,55 @@
+{
+  "example_name": "Agent Report Example",
+  "description": "Example structure of an agent report showing analysis findings",
+  "agent_report": {
+    "agent_id": "SCOUT",
+    "agent_name": "SCOUT",
+    "timestamp": "2026-02-06T09:35:00Z",
+    "status": "complete",
+    "report_type": "ANALYSIS",
+    "confidence": 88,
+    "message": "Found 3 gap-up candidates with strong momentum",
+    "summary": "Pre-market scan complete. NVDA, AMD, and META show gap-up patterns with volume surge.",
+    "findings": {
+      "candidates": [
+        {
+          "symbol": "NVDA",
+          "gap_percent": 2.5,
+          "volume_ratio": 2.3,
+          "momentum_score": 85,
+          "pre_market_price": 152.50,
+          "previous_close": 148.75
+        },
+        {
+          "symbol": "AMD",
+          "gap_percent": 1.8,
+          "volume_ratio": 1.9,
+          "momentum_score": 72,
+          "pre_market_price": 145.20,
+          "previous_close": 142.80
+        },
+        {
+          "symbol": "META",
+          "gap_percent": 1.2,
+          "volume_ratio": 1.6,
+          "momentum_score": 68,
+          "pre_market_price": 485.30,
+          "previous_close": 479.50
+        }
+      ],
+      "scan_metrics": {
+        "total_scanned": 150,
+        "candidates_found": 3,
+        "scan_duration_ms": 1250,
+        "data_sources": ["Finviz", "Alpaca", "Pre-market movers"]
+      }
+    },
+    "data": {
+      "scan_type": "pre_market",
+      "market_status": "pre_market",
+      "scan_time": "09:35:00 ET"
+    },
+    "execution_time_ms": 1250
+  },
+  "note": "This demonstrates the structure of agent reports. Production reports include real-time market data and analysis."
+}
