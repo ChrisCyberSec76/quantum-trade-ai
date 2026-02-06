@@ -41,7 +41,6 @@ quantum-trade-ai/
 │       └── schemas.py   # Pydantic models
 ├── docs/                # Architecture documentation
 │   ├── ARCHITECTURE.md           # System architecture
-│   ├── DIAGRAMS.md               # Visual flow diagrams (Mermaid)
 │   ├── AI_BOARD_MEETINGS.md      # AI agent collaboration
 │   ├── CIO_MEMORY_VAULT.md       # Persistent learning system
 │   ├── AUTONOMOUS_AGENTS.md      # 14-agent orchestration
@@ -79,7 +78,6 @@ quantum-trade-ai/
 See the `docs/` directory for detailed documentation:
 
 - **[ARCHITECTURE.md](docs/ARCHITECTURE.md)** - System architecture and design patterns
-- **[DIAGRAMS.md](docs/DIAGRAMS.md)** - Visual system flow diagrams (Mermaid)
 - **[AI_BOARD_MEETINGS.md](docs/AI_BOARD_MEETINGS.md)** - How AI agents collaborate
 - **[CIO_MEMORY_VAULT.md](docs/CIO_MEMORY_VAULT.md)** - Persistent learning system
 - **[AUTONOMOUS_AGENTS.md](docs/AUTONOMOUS_AGENTS.md)** - 14-agent orchestration
@@ -191,11 +189,6 @@ This project represents a **real-world, production-ready system**, not a demo or
 - Time-aware context (pre-market, live trading, post-market)
 - Voice-enabled agent interactions
 - See [`docs/AI_BOARD_MEETINGS.md`](docs/AI_BOARD_MEETINGS.md) for details
-
-### 📈 Visual System Diagrams
-- Comprehensive Mermaid diagrams showing system flow
-- Architecture, agent orchestration, memory lifecycle, and decision flows
-- See [`docs/DIAGRAMS.md`](docs/DIAGRAMS.md) for all visual representations
 
 ---
 
