@@ -1,0 +1,193 @@
+{
+  "example_name": "Gap-Up Momentum Trade Decision Flow",
+  "description": "Example showing how multiple agents collaborate to make a trading decision",
+  "timestamp": "2026-02-06T09:35:00Z",
+  "scenario": "NVDA gap-up detected pre-market",
+  
+  "tier_1_results": {
+    "SCOUT": {
+      "agent": "SCOUT",
+      "status": "complete",
+      "findings": {
+        "candidates": ["NVDA"],
+        "gap_percent": 2.5,
+        "volume_ratio": 2.3,
+        "momentum_score": 85
+      },
+      "confidence": 88,
+      "summary": "NVDA gap-up +2.5% with volume surge 2.3x average. Strong momentum."
+    },
+    "NEWS": {
+      "agent": "NEWS",
+      "status": "complete",
+      "findings": {
+        "articles": [
+          {"headline": "NVDA announces new product", "impact": "HIGH"},
+          {"headline": "Analyst upgrades NVDA price target", "impact": "MEDIUM"}
+        ],
+        "news_score": 75
+      },
+      "confidence": 80,
+      "summary": "Positive news: Product announcement and analyst upgrade."
+    },
+    "SENTIMENT": {
+      "agent": "SENTIMENT",
+      "status": "complete",
+      "findings": {
+        "sentiment_score": 82,
+        "social_buzz": "HIGH",
+        "trending": true
+      },
+      "confidence": 75,
+      "summary": "Bullish sentiment shift. High social media buzz."
+    },
+    "CATALYST": {
+      "agent": "CATALYST",
+      "status": "complete",
+      "findings": {
+        "catalysts": [
+          {"type": "PRODUCT_LAUNCH", "time": "11:00 AM ET", "impact": "HIGH"}
+        ],
+        "catalyst_score": 90
+      },
+      "confidence": 85,
+      "summary": "Product launch at 11 AM. High-impact catalyst."
+    }
+  },
+  
+  "tier_2_results": {
+    "PATTERN": {
+      "agent": "PATTERN",
+      "status": "complete",
+      "findings": {
+        "pattern": "BREAKOUT",
+        "resistance_level": 150.00,
+        "current_price": 152.50,
+        "pattern_score": 88
+      },
+      "confidence": 85,
+      "summary": "Breaking above resistance. Strong breakout pattern."
+    },
+    "REGIME": {
+      "agent": "REGIME",
+      "status": "complete",
+      "findings": {
+        "regime": "RISK_ON",
+        "vix": 16.5,
+        "breadth": "POSITIVE",
+        "regime_score": 80
+      },
+      "confidence": 80,
+      "summary": "Risk-on regime. Favorable market environment."
+    },
+    "EMA": {
+      "agent": "EMA",
+      "status": "complete",
+      "findings": {
+        "trend": "BULLISH",
+        "ema9": 151.20,
+        "ema20": 149.80,
+        "ema_score": 85
+      },
+      "confidence": 82,
+      "summary": "Strong bullish trend. EMA alignment confirms."
+    },
+    "QUANT": {
+      "agent": "QUANT",
+      "status": "complete",
+      "findings": {
+        "ml_signal": 78,
+        "factor_score": 82,
+        "quant_score": 80
+      },
+      "confidence": 75,
+      "summary": "Quantitative factors positive. ML signal strength 78%."
+    }
+  },
+  
+  "tier_3_results": {
+    "RISK": {
+      "agent": "RISK",
+      "status": "complete",
+      "findings": {
+        "portfolio_allocation": 60,
+        "max_allocation": 100,
+        "risk_score": 85,
+        "can_trade": true
+      },
+      "confidence": 90,
+      "summary": "Portfolio at 60% allocation. Room for new position. Risk acceptable."
+    },
+    "COMPLIANCE": {
+      "agent": "COMPLIANCE",
+      "status": "complete",
+      "findings": {
+        "compliant": true,
+        "violations": [],
+        "compliance_score": 100
+      },
+      "confidence": 100,
+      "summary": "All compliance checks passed. Trade approved."
+    }
+  },
+  
+  "tier_4_synthesis": {
+    "HARVEY": {
+      "agent": "HARVEY",
+      "status": "complete",
+      "synthesis": {
+        "narrative": "NVDA presents a high-conviction opportunity. Strong gap-up with volume surge, positive news, bullish sentiment, and product launch catalyst. Technical patterns confirm breakout. Market regime is risk-on. All risk and compliance checks passed.",
+        "conviction": "HIGH",
+        "recommendation": "BUY",
+        "confidence": 88
+      },
+      "summary": "High-conviction BUY recommendation. All factors align."
+    }
+  },
+  
+  "tier_5_decision": {
+    "CIO": {
+      "agent": "CIO",
+      "status": "complete",
+      "decision": {
+        "action": "BUY",
+        "symbol": "NVDA",
+        "confidence": 88,
+        "rationale": "Strong gap-up momentum play with multiple confirmations: volume surge, positive news, bullish sentiment, product launch catalyst, breakout pattern, risk-on regime, and favorable risk/compliance status. High-conviction opportunity.",
+        "factors": {
+          "momentum": 85,
+          "news": 75,
+          "sentiment": 82,
+          "catalyst": 90,
+          "pattern": 88,
+          "regime": 80,
+          "ema": 85,
+          "quant": 80,
+          "risk": 85,
+          "compliance": 100
+        },
+        "memory_influence": {
+          "applied_memories": 2,
+          "confidence_boost": 5,
+          "learnings": [
+            "NVDA gap-ups >2% have 75% win rate",
+            "Product launches create momentum"
+          ]
+        }
+      },
+      "summary": "DECISION: BUY NVDA with 88% confidence. High-conviction opportunity."
+    }
+  },
+  
+  "final_outcome": {
+    "action": "BUY",
+    "symbol": "NVDA",
+    "entry_price": 152.50,
+    "confidence": 88,
+    "agents_contributing": 10,
+    "tiers_completed": 5,
+    "decision_time_ms": 4500
+  },
+  
+  "note": "This is example mock data demonstrating the decision flow. Production system provides real-time agent collaboration and decisions."
+}
